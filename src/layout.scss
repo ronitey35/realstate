@@ -1,0 +1,23 @@
+@import "./resposive.scss";
+.layout {
+  background-color: rgb(33, 129, 73);
+  height: 100vh;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include lg {
+    background-color: rgb(219, 121, 85);
+    max-width: 1280px;
+  }
+  @include md {
+    background-color: rgb(107, 107, 235);
+    max-width: 768px;
+  }
+  @include sm {
+    background-color: rgb(240, 2, 2);
+    max-width: 640px;
+  }
+}
