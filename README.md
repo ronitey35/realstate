@@ -2,3 +2,4 @@
 =>SAAS
 =>javascript
 =>React Query
+=>Zustand
