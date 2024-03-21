@@ -3,3 +3,4 @@
 =>javascript
 =>React Query
 =>Zustand
+=>responsive
