@@ -1,20 +1,22 @@
 @import "../../resposive.scss";
-
-.navbar {
+nav {
+  height: 100px;
   display: flex;
   justify-content: space-between;
-  height: 100px;
   align-items: center;
 
   a {
     transition: all 0.4s ease;
-    &:hover {
-      scale: 1.05;
-    }
+
     @include sm {
       display: none;
     }
+
+    &:hover {
+      scale: 1.05;
+    }
   }
+
   .left {
     flex: 3;
     display: flex;
@@ -22,11 +24,12 @@
     gap: 50px;
 
     .logo {
-      font-size: 20px;
       font-weight: bold;
+      font-size: 20px;
       display: flex;
       align-items: center;
       gap: 10px;
+
       img {
         width: 28px;
       }
@@ -45,11 +48,11 @@
   .right {
     flex: 2;
     display: flex;
-    gap: 20px;
-    justify-content: flex-end;
     align-items: center;
+    justify-content: flex-end;
     background-color: #fcf5f3;
     height: 100%;
+
     @include md {
       background-color: transparent;
     }
@@ -58,22 +61,69 @@
       padding: 12px 24px;
       margin: 20px;
     }
-    .yellow {
-      background: yellow;
-      border-radius: 20%;
+
+    .user {
+      display: flex;
+      align-items: center;
+      font-weight: bold;
+
+      img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 20px;
+      }
+
+      span {
+        @include sm {
+          display: none;
+        }
+      }
+
+      .profile {
+        padding: 12px 24px;
+        background-color: #fece51;
+        cursor: pointer;
+        border: none;
+        position: relative;
+
+        .notification {
+          position: absolute;
+          top: -8px;
+          right: -8px;
+          background-color: red;
+          color: white;
+          border-radius: 50%;
+          width: 26px;
+          height: 26px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
     }
+
+    .yellow {
+      background-color: #fece51;
+      border-radius: 5px;
+    }
+
     .menuIcon {
       display: none;
       z-index: 999;
+
       img {
         width: 36px;
         height: 36px;
         cursor: pointer;
       }
+
       @include sm {
-        display: initial;
+        display: inline;
       }
     }
+
     .menu {
       position: absolute;
       top: 0;
@@ -87,12 +137,12 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      font-size: medium;
-      font-size: 20px;
+      font-size: 24px;
 
       &.active {
         right: 0;
       }
+
       @include sm {
         a {
           display: initial;
